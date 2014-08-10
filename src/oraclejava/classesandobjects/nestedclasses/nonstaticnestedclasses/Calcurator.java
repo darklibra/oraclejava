@@ -14,8 +14,12 @@ public class Calcurator {
 		public int sub() {return l - r;}
 	}
 	
+	public Result getResult() {
+		return new Result();
+	}
+	
 	public static void main(String[] args) {
-		Result r = new Calcurator(10, 5).new Result();
+		Result r = new Calcurator(10, 5).getResult();
 		
 		System.out.println(" add " + r.add());
 		System.out.println(" sub " + r.sub());
