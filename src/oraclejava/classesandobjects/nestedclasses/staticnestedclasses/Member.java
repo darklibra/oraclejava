@@ -4,6 +4,8 @@ public class Member {
 	private String name;
 	private int age;
 	
+	private Member() {}
+	
 	public static class MemberParser {
 		public static Member paser() {
 			Member m = new Member();
