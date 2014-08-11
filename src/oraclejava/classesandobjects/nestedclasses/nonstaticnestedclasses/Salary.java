@@ -25,7 +25,6 @@ public class Salary {
 		return new SalaryPayment();
 	}
 	
-	
 	public static void main(String[] args) {
 		Payment p = new Salary(100000, 5).getPayment();
 		System.out.println("calPay : " + p.calPay());
