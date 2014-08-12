@@ -14,6 +14,10 @@ public class Salary {
 		int calPay();
 	}
 	
+	@FunctionalInterface
+	interface Payment2 {
+		int calPay(int overTime);
+	}
 	
 	public Payment getPayment(double overtimeRadio) {
 		return () -> {
@@ -21,7 +25,7 @@ public class Salary {
 			return base + overtimePay;
 		};
 	}
-	
+
 	public static void main(String[] args) {
 		Payment p = new Salary(100000, 5).getPayment(1.5);
 		System.out.println("calPay : " + p.calPay());
@@ -31,6 +35,11 @@ public class Salary {
 		
 		Payment p2 = () -> {return 1000;};
 		System.out.println("calPay : " + p2.calPay());
-
+		
+		Payment2 p3 = e -> {return 1000 * e;};
+		System.out.println("calPay : " + p3.calPay(2));
+		
+		Payment2 p4 = e -> 1000 * e;
+		System.out.println("calPay : " + p4.calPay(3));
 	}
 }
