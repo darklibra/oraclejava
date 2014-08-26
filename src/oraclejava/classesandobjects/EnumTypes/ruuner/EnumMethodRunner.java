@@ -5,13 +5,13 @@ import oraclejava.classesandobjects.EnumTypes.EnumMethod;
 public class EnumMethodRunner {
 	public static void main(String[] args) {
 		
-		System.out.println("¿ù¿äÀÏ? : " + EnumMethod.MONDAY.getWeekName());
-		System.out.println("ÀÏ¿äÀÏ? : " + EnumMethod.SUNDAY.getWeekName());
+		System.out.println("ì›”ìš”ì¼? : " + EnumMethod.MONDAY.getWeekName());
+		System.out.println("ì¼ìš”ì¼? : " + EnumMethod.SUNDAY.getWeekName());
 		
 		EnumMethod mon = EnumMethod.MONDAY;
-		System.out.println("¿ù¿äÀÏ? : " + mon.getWeekName());
+		System.out.println("ì›”ìš”ì¼? : " + mon.getWeekName());
 		
 		EnumMethod sun = EnumMethod.SUNDAY;
-		System.out.println("ÀÏ¿äÀÏ? : " + sun.getWeekName());
+		System.out.println("ì¼ìš”ì¼? : " + sun.getWeekName());
 	}
 }

@@ -1,8 +1,8 @@
 package oraclejava.classesandobjects.EnumTypes;
 
 public enum EnumMethod {
-	MONDAY("¿ù¿äÀÏ"),
-	SUNDAY("ÀÏ¿äÀÏ");
+	MONDAY("ì›”ìš”ì¼"),
+	SUNDAY("ì¼ìš”ì¼");
 	
 	String weekname;
 	private EnumMethod(String weekname) {
