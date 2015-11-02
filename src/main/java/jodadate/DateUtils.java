@@ -63,10 +63,6 @@ public class DateUtils {
 	public static void main(String[] args) {
 		LocalDate today = LocalDate.now();
 		
-		// 오늘
-		System.out.println(DateUtils.isToday(today));
-		System.out.println(DateUtils.isToday(today.minusDays(1)));
-		
 		// 이번주
 		System.out.println(DateUtils.isNowWeekyear(today));
 		System.out.println(DateUtils.isNowWeekyear(today.minusDays(7)));
