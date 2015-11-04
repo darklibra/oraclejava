@@ -15,6 +15,10 @@ public class Member {
 			m.age = Integer.valueOf(datas[1]);
 			return m;
 		}
+
+		private static String toString(Member member) {
+			return member.name + "#" + member.age;
+		}
 	}
 
 	public String getName() {
@@ -27,16 +31,6 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return name + "#" + age;
-	}
-
-	public static void main(String[] args) {
-		String data = "Values#100";
-		Member m = MemberParser.parser(data);
-		
-		System.out.println("name : " + m.getName());
-		System.out.println("age : " + m.getAge());
-		
-		System.out.println("data(" + data + ") == m(" + m + ") ? " + data.equals(m.toString()));
+		return MemberParser.toString(this);
 	}
 }
