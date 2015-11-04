@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.nonstaticnestedclasses.anonymousclasses;
+package oraclejava.classesandobjects.nested.nonstaticnested.anonymous;
 
 public class Salary {
 	private int base;

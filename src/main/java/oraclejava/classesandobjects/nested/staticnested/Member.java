@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.staticnestedclasses;
+package oraclejava.classesandobjects.nested.staticnested;
 
 public class Member {
 	private String name;

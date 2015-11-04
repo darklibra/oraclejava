@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.nonstaticnestedclasses.lambdaexpressions;
+package oraclejava.classesandobjects.nested.nonstaticnested.lambdaexpressions;
 
 import java.util.OptionalInt;
 import java.util.stream.IntStream;

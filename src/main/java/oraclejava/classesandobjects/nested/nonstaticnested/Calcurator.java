@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.nonstaticnestedclasses;
+package oraclejava.classesandobjects.nested.nonstaticnested;
 
 public class Calcurator {
 	private int l;

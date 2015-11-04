@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.nonstaticnestedclasses.lambdaexpressions;
+package oraclejava.classesandobjects.nested.nonstaticnested.lambdaexpressions;
 
 public class Salary {
 	private int base;

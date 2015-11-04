@@ -1,4 +1,4 @@
-package oraclejava.classesandobjects.nestedclasses.nonstaticnestedclasses.localclasses;
+package oraclejava.classesandobjects.nested.nonstaticnested.localclasses;
 
 public class Salary {
 	private int base;

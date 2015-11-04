@@ -10,7 +10,6 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Created by Administrator on 2015-11-02.
  */
 public class DateUtilsTest {
-
     private LocalDate firstDayOfYear;
     private LocalDate lastDayOfYear;
     private LocalDate today;
@@ -35,7 +34,9 @@ public class DateUtilsTest {
 
     @Test
     public void weekyear() {
-        assertThat(DateUtils.weekyear(firstDayOfYear)).isEqualTo(1);
+        final int expected = 1;
+
+        assertThat(DateUtils.weekyear(firstDayOfYear)).isEqualTo(expected);
     }
 
     @Test
@@ -100,5 +101,12 @@ public class DateUtilsTest {
         assertThat(DateUtils.lastDateOfWeek(firstDayOfYear)).isEqualTo(expected);
         assertThat(DateUtils.lastDateOfWeek(lastDayOfYear.minusYears(1))).isEqualTo(expected);
         assertThat(DateUtils.lastDateOfWeek(firstDateOfWeek)).isEqualTo(expected);
+    }
+
+    @Test
+    public void month() {
+        final int expected = 1;
+
+        assertThat(DateUtils.month(firstDayOfYear)).isEqualTo(expected);
     }
 }
