@@ -17,11 +17,4 @@ public class Calcurator {
 	public Result getResult() {
 		return new Result();
 	}
-	
-	public static void main(String[] args) {
-		Result r = new Calcurator(10, 5).getResult();
-		
-		System.out.println(" add " + r.add());
-		System.out.println(" sub " + r.sub());
-	}
 }

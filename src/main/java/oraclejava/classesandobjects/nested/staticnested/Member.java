@@ -7,7 +7,6 @@ public class Member {
 	private Member() {}
 	
 	public static class MemberParser {
-		// TODO : 인자를 받아서 잘라서 보내주는 코드를 추가 예정
 		public static Member parser(String data) {
 			String[] datas = data.split("#");
 			Member m = new Member();
@@ -21,14 +20,6 @@ public class Member {
 		}
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public int getAge() {
-		return age;
-	}	
-	
 	@Override
 	public String toString() {
 		return MemberParser.toString(this);

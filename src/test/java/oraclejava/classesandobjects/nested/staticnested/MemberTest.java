@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Created by Administrator on 2015-11-04.
+ * Created by dain on 2015-11-04.
  */
 public class MemberTest {
     @Test

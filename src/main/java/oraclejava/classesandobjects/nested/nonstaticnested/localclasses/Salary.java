@@ -24,12 +24,4 @@ public class Salary {
 		}
 		return new SalaryPayment();
 	}
-	
-	public static void main(String[] args) {
-		Payment p = new Salary(100000, 5).getPayment(1.5);
-		System.out.println("calPay : " + p.calPay());
-		
-		p = new Salary(100000, 5).getPayment(2.0);
-		System.out.println("calPay : " + p.calPay());
-	}
 }

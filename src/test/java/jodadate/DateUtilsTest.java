@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Created by Administrator on 2015-11-02.
+ * Created by dain on 2015-11-02.
  */
 public class DateUtilsTest {
     private LocalDate firstDayOfYear;
