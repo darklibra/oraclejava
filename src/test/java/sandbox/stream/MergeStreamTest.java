@@ -39,17 +39,18 @@ public class MergeStreamTest {
 
     @Test
     public void simple_merge_with_stream () {
+        final int expected = source.size() + target.size();
         final List<Integer> result = Stream.concat(source.stream(), target.stream())
                 .collect(Collectors.toList());
 
-        assertThat(result.size()).isEqualTo(source.size() + target.size());
+        assertThat(result.size()).isEqualTo(expected);
         IntStream.range(1, 10).forEach(e -> assertThat(e).isEqualTo(result.get(e - 1)));
     }
 
     @Test
     public void three_stream_merge_with_stream_way_1 () {
         final List<Integer> three = Lists.newArrayList(10, 11, 12, 13, 14);
-        int expectedResultSize = source.size() + target.size() + three.size();
+        final int expectedResultSize = source.size() + target.size() + three.size();
 
         final List<Integer> result = Stream.concat(Stream.concat(source.stream(), target.stream()), three.stream())
                 .collect(Collectors.toList());
@@ -61,7 +62,7 @@ public class MergeStreamTest {
     @Test
     public void three_stream_merge_with_stream_way_2 () {
         final List<Integer> three = Lists.newArrayList(10, 11, 12, 13, 14);
-        int expectedResultSize = source.size() + target.size() + three.size();
+        final int expectedResultSize = source.size() + target.size() + three.size();
 
         final List<Integer> result = Optional.of(source.stream())
                 .map(e -> Stream.concat(e, target.stream()))
@@ -76,7 +77,7 @@ public class MergeStreamTest {
     @Test
     public void three_stream_merge_with_stream_way_3 () {
         final List<Integer> three = Lists.newArrayList(10, 11, 12, 13, 14);
-        int expectedResultSize = source.size() + target.size() + three.size();
+        final int expectedResultSize = source.size() + target.size() + three.size();
 
         final List<Integer> result = Stream.of(source.stream(), target.stream(), three.stream())
                 .flatMap(Function.identity())
