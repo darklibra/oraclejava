@@ -88,6 +88,18 @@ public class GroupByListToMapTest {
         assertThat(grouped.get(2)).isEqualTo(joining.apply(expect_grouped_2));
     }
 
+    @Test
+    public void group_by_divider_with_map() {
+        final Function<List<SourceItem>, List<String>> toStringList = e -> e.stream().map(SourceItem::getIdentifier).collect(Collectors.toList());
+        final BiFunction<List<String>, List<String>, Boolean> tester = (l, r) -> (l.size() == r.size()) && l.containsAll(r);
+
+        final Map<Integer, List<String>> grouped = source.stream()
+                .collect(Collectors.groupingBy(SourceItem::getDivider, Collectors.mapping(SourceItem::getIdentifier, Collectors.toList())));
+
+        assertThat(tester.apply(toStringList.apply(expect_grouped_1), grouped.get(1))).isTrue();
+        assertThat(tester.apply(toStringList.apply(expect_grouped_2), grouped.get(2))).isTrue();
+    }
+
     @Data @ToString @EqualsAndHashCode(of = {"identifier"})
     @AllArgsConstructor
     private static class SourceItem {
